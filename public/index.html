@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA PARA WHATSAPP</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.js"></script>
+</head>
+<body>
+    <div id="panel-bienvenida">
+        <h2>Ingrese sus credenciales:</h2>
+        <input type="text" id="persona" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="ingresarAlChat()">Ingresar</button>
+    </div>
+
+    <div id="app-chat" style="display:none;">
+        <div id="chat-container">
+            <h2 id="chat-title">Chat en vivo</h2>
+            <div id="ventana-mensajes">
+                <div id="output"></div> <!-- Mensajes del chat -->
+                <div id="escribiendo-mensaje"></div> <!-- Mensaje "escribiendo..." -->
+            </div>
+            <input type="text" id="usuario" readonly>
+            <input type="text" id="mensaje" placeholder="Escribe tu mensaje...">
+            <button id="enviar">Enviar</button>
+        </div>
+
+        <!-- Nueva sección para mostrar usuarios en línea -->
+        <div id="usuarios-en-linea">
+            <h3>Usuarios en Línea</h3>
+            <div id="lista-usuarios"></div> <!-- Aquí se mostrarán los usuarios -->
+        </div>
+    </div>
+
+    <script src="/chat.js"></script>
+</body>
+</html>
